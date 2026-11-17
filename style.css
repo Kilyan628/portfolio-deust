@@ -1,71 +1,81 @@
-/* Éléments */
+/* Sélecteurs d'éléments */
 
-body {
-  font-family: "Poppins", Arial, sans-serif;
+html {
 
-  color: #333a55;
+    scroll-behavior: smooth; /* lien "Haut de page" fluide */
 
-  background-color: #eef1fa;
-
-  margin: 0;
-
-  line-height: 1.6;
 }
 
-main {
-  max-width: 800px;
 
-  margin: 0 auto;
-
-  padding: 20px;
-}
 
 h1 {
-  text-align: center;
 
-  color: #dd8615;
+    letter-spacing: 0.5px;
+
 }
 
-h2 {
-  color: #18143d;
 
-  border-bottom: 1px solid #c9d2ee;
 
-  padding-bottom: 8px;
+a {
+
+    transition: color 0.2s;
+
 }
 
-h3 {
-  margin-bottom: 0;
 
-  color: #1b2142;
-}
 
-footer {
-  text-align: center;
-
-  padding: 20px;
-
-  color: #6a7190;
-}
-
-/* Identifiant */
+/* Sélecteur d'identifiant */
 
 #main-header {
-  background-color: #1b2142;
 
-  color: white;
+    border-bottom: 4px solid #f59e0b;
 
-  padding: 15px 30px;
-
-  display: flex;
-
-  justify-content: space-between;
-
-  align-items: center;
 }
 
-#main-header p {
-  margin: 0;
 
-  font-weight: 600;
+
+/* Liens de navigation */
+
+nav a:hover {
+
+    text-decoration: underline;
+
+}
+
+
+
+/* Sélecteur de classe */
+
+.card-hover:hover {
+
+    transform: translateY(-3px);
+
+    transition: transform 0.2s;
+
+}
+
+
+
+/* Impression du CV : on cache la navigation et le pied de page */
+
+@media print {
+
+    #main-header,
+
+    footer,
+
+    a[download] {
+
+        display: none;
+
+    }
+
+
+
+    body {
+
+        background-color: white;
+
+    }
+
 }
